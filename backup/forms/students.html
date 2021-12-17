@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>CRM - Students</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="courses.html"><i class="fa fa-fw fa-book "></i> Courses</a>
+        <a href="assignments.html"><i class="fa fa-fw fa-pencil-square-o"></i> Assignements</a>
+        <a href="assignmentsPerCourse.html"><i class="fa fa-fw fa-pencil-square"></i> Assign/Course</a>
+        <a href="trainers.html"><i class="fa fa-fw fa-user-circle"></i> Trainers</a>
+        <a href="trainersPerCourse.html"><i class="fa fa-fw fa-user-circle-o"></i> Train/Course</a>
+        <a href="students.html"><i class="fa fa-fw fa-user-o"></i> Students</a>
+        <a href="studentsPerCourse.html"><i class="fa fa-fw fa-user"></i> Stud/Course</a>
+        <br>
+        <a href="" target="demo"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out</a>
+
+    </div>
+
+    <div class="container">
+        <header id="header1">
+            <div id='id1'>
+                <h1>STUDENTS</h1>
+            </div>
+            <div id='id2'>
+                <p>Bootcamp Management System</p>
+            </div>
+        </header>
+
+        <form action="">
+            <fieldset class="newField">
+                <legend>New Entry</legend>
+                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
+                    <p><label>First Name: <br> <input type="text" required placeholder="Enter Your Name"></label></p>
+                    <p><label>Last Name: <br> <input type="text" required placeholder="Enter Your Surname"></label></p>
+                    <p><label>Date of Birth: <br> <input type="date"></label></p>
+                    <P><label>Tuition Fee: <br><input type="number"></label></P>
+                    <input type="submit" value="Add Student">
+                    <input type="reset" value="Clear">
+                </form>
+            </fieldset>
+        </form>
+
+
+        <!-- Stored Students -->
+        <summary>
+            <!-- <form action=""> -->
+                <fieldset class="savedField">
+                    <legend>Student List</legend>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date of Birth</th>
+                            <th>Tuition Fees</th>
+                            <th>Actions</th>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">1</td>
+                            <td>Nikos</td>
+                            <td>Nikolaidis</td>
+                            <td>12/12/1993</td>
+                            <td>$2000</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Christos</td>
+                            <td>Christidis</td>
+                            <td>22/02/1992</td>
+                            <td>$2500</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Sofia</td>
+                            <td>Sofiadi</td>
+                            <td>05/06/1990</td>
+                            <td>$2000</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Maria</td>
+                            <td>Mariaki</td>
+                            <td>09/04/1991</td>
+                            <td>$2500</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mitsos</td>
+                            <td>Mitsakos</td>
+                            <td>05/12/1992</td>
+                            <td>$2500</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            <!-- </form> -->
+        </summary>
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Copyright &copy: 2021 Bootcamp</p>
+        </footer>
+    </div>
+    <script src="validations.js"></script>
+</body>
+
+</html>

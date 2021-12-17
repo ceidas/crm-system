@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/student.css">
+    <link rel="stylesheet" href="../css/calendar.css"> -->
+    <title>CRM - Assignments</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="courses.html"><i class="fa fa-fw fa-book "></i> Courses</a>
+        <a href="assignments.html"><i class="fa fa-fw fa-pencil-square-o"></i> Assignements</a>
+        <a href="assignmentsPerCourse.html"><i class="fa fa-fw fa-pencil-square"></i> Assign/Course</a>
+        <a href="trainers.html"><i class="fa fa-fw fa-user-circle"></i> Trainers</a>
+        <a href="trainersPerCourse.html"><i class="fa fa-fw fa-user-circle-o"></i> Train/Course</a>
+        <a href="students.html"><i class="fa fa-fw fa-user-o"></i> Students</a>
+        <a href="studentsPerCourse.html"><i class="fa fa-fw fa-user"></i> Stud/Course</a>
+        <br>
+        <a href="" target="demo"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out</a>
+
+    </div>
+
+    <!-- Add-Form Section -->
+    <main class="container">
+        <header id="header1">
+            <div id='id1'>
+                <h1>ASSIGNMENTS</h1>
+            </div>
+            <div id='id2'>
+                <p>Bootcamp Management System</p>
+            </div>
+        </header>
+
+        <!-- <button class="button button1">Green</button> -->
+
+        <form action="">
+            <fieldset class="newField">
+                <legend>New Entry</legend>
+                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
+
+                    <p><label>Title: <br> <input type="text" required placeholder="Enter Assignement Title"></label>
+                    </p>
+                    <p><label>Select Description: <br> <textarea name="Comments" id="" cols="30"
+                                rows="4"></textarea></label></p>
+
+                    <p><label>Select Deadline: <br><input type="date"></label></p>
+                    <p><label>Oral Mark: <br><input type="number"></label></p>
+                    <p><label>Total Mark: <br><input type="number"></label></p>
+                    <input type="submit" value="Add Assignment">
+                    <input type="reset" value="Clear">
+                </form>
+            </fieldset>
+        </form>
+
+        <!-- Stored Students -->
+        <summary>
+            <form action="">
+                <fieldset class="savedField">
+                    <legend>Assignement List</legend>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>Assignement Title</th>
+                            <th>Description</th>
+                            <th>Deadline</th>
+                            <th>Oral Mark</th>
+                            <th>Total Mark</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">1</td>
+                            <td>Assignment 1</td>
+                            <td>Part Time</td>
+                            <td>01/02/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">2</td>
+                            <td>Assignment 2</td>
+                            <td>Part Time</td>
+                            <td>01/03/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">3</td>
+                            <td>Assignment 3</td>
+                            <td>Part Time</td>
+                            <td>01/04/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">4</td>
+                            <td>Assignment 4</td>
+                            <td>Part Time</td>
+                            <td>01/05/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">5</td>
+                            <td>Assignment 5</td>
+                            <td>Part Time</td>
+                            <td>01/06/2021</td>
+                            <td>40</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">6</td>
+                            <td>Individual 1</td>
+                            <td>Part Time</td>
+                            <td>01/07/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">7</td>
+                            <td>Individual 2</td>
+                            <td>Part Time</td>
+                            <td>01/07/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">8</td>
+                            <td>AssignCLD 1</td>
+                            <td>Part Time</td>
+                            <td>10/05/2021</td>
+                            <td>40</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">9</td>
+                            <td>AssignCLD 2</td>
+                            <td>Part Time</td>
+                            <td>01/07/2021</td>
+                            <td>50</td>
+                            <td>100</td>
+                            <td style="color: firebrick
+                        ;">Edit / Delete</td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </form>
+        </summary>
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Copyright &copy: 2021 Bootcamp</p>
+        </footer>
+    </main>
+    <script src="validations.js"></script>
+</body>
+
+</html>

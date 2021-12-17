@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="../fonts/"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/student.css">
+    <link rel="stylesheet" href="../css/calendar.css"> -->
+    <title>CRM - Courses </title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="courses.html"><i class="fa fa-fw fa-book "></i> Courses</a>
+        <a href="assignments.html"><i class="fa fa-fw fa-pencil-square-o"></i> Assignements</a>
+        <a href="assignmentsPerCourse.html"><i class="fa fa-fw fa-pencil-square"></i> Assign/Course</a>
+        <a href="trainers.html"><i class="fa fa-fw fa-user-circle"></i> Trainers</a>
+        <a href="trainersPerCourse.html"><i class="fa fa-fw fa-user-circle-o"></i> Train/Course</a>
+        <a href="students.html"><i class="fa fa-fw fa-user-o"></i> Students</a>
+        <a href="studentsPerCourse.html"><i class="fa fa-fw fa-user"></i> Stud/Course</a>
+        <br>
+        <a href="" target="demo"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out</a>
+    </div>
+
+    <!-- Add-Form Section -->
+    <div class="container">
+        <header id="header1">
+            <div id='id1'>
+                <h1>COURSES</h1>
+            </div>
+            <div id='id2'>
+                <p>Bootcamp Management System</p>
+            </div>
+        </header>
+
+
+
+        <!-- <form action="" name="studentForm"> -->
+            <fieldset class="newField">
+                <legend>New Entry</legend>
+
+                
+
+                <form action="" id="courseForm"  novalidate >
+                    <div class="error" id="printError"></div>
+                    <p><label>Course Name: <br> <input type="text" name="coursename" id="coursename" required placeholder="Enter Course Name"></label></p>
+                    <p><label>Stream: <br> <input type="text" required placeholder="Add Stream"></label></p>
+                    <p><label for="type">Type: <br>
+                            <select name="type" id="type">
+                                <option value="">Full Time</option>
+                                <option value="partTime">Part Time</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p><label for="start">Start Date: <br><input type="date" name="start"></label></p>
+                    <p><label for="end">End Date: <br><input type="date" name="end"></label></p>
+                    <!-- <input type="submit" value="Add Course"> -->
+                    <!-- <input type="reset" value="Clear"> -->
+                    <button id="clear" type="reset">Clear</button>
+                    <button id="submit" type="submit" onclick="validateStudentForm()">Submit</button>
+                </form>
+            </fieldset>
+        <!-- </form> -->
+
+
+        <!-- Stored Students -->
+
+        <summary>
+            <form action="">
+                <fieldset class="savedField">
+                    <legend>Course List</legend>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>Course Title</th>
+                            <th>Stream</th>
+                            <th>Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">1</td>
+                            <td>CB 10</td>
+                            <td>Javascript</td>
+                            <td>Full Time</td>
+                            <td>01/01/2021</td>
+                            <td>01/07/2021</td>
+                            <td style="color: firebrick
+                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">2</td>
+                            <td> CB 10</td>
+                            <td>Javascript</td>
+                            <td>Part Time</td>
+                            <td>01/01/2021</td>
+                            <td>01/07/2021</td>
+                            <td style="color: firebrick
+                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">3</td>
+                            <td>CB 10</td>
+                            <td>C#</td>
+                            <td>Full Time</td>
+                            <td>01/01/2021</td>
+                            <td>01/07/2021</td>
+                            <td style="color: firebrick
+                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">4</td>
+                            <td>CB 11</td>
+                            <td>Python</td>
+                            <td>Part Time</td>
+                            <td>10/10/2021</td>
+                            <td>09/06/2022</td>
+                            <td style="color: firebrick
+                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">5</td>
+                            <td>DevOps</td>
+                            <td>Cloud</td>
+                            <td>Full Time</td>
+                            <td>10/02/2022</td>
+                            <td>10/05/2022</td>
+                            <td style="color: firebrick
+                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td style="color:blue">6</td>
+                            <td>DevOps</td>
+                            <td>Cloud</td>
+                            <td>Part Time</td>
+                            <td>01/01/2022</td>
+                            <td>01/07/2022</td>
+                            <td style="color: firebrick
+                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </a></td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </summary>
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Copyright &copy: 2021 Bootcamp</p>
+        </footer>
+    </div>
+    <script src="../validations.js"></script>
+</body>
+
+</html>

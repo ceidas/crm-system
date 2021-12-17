@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../fonts/">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/student.css">
+    <link rel="stylesheet" href="../css/calendar.css"> -->
+    <title>CRM - Home Page</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="courses.html"><i class="fa fa-fw fa-book "></i> Courses</a>
+        <a href="assignments.html"><i class="fa fa-fw fa-pencil-square-o"></i> Assignements</a>
+        <a href="assignmentsPerCourse.html"><i class="fa fa-fw fa-pencil-square"></i> Assign/Course</a>
+        <a href="trainers.html"><i class="fa fa-fw fa-user-circle"></i> Trainers</a>
+        <a href="trainersPerCourse.html"><i class="fa fa-fw fa-user-circle-o"></i> Train/Course</a>
+        <a href="students.html"><i class="fa fa-fw fa-user-o"></i> Students</a>
+        <a href="studentsPerCourse.html"><i class="fa fa-fw fa-user"></i> Stud/Course</a>
+        <br>
+        <a href="" target="demo"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out</a>
+
+    </div>
+
+    <!-- Add-Form Section -->
+    <main class="container">
+        <header id="header1">
+            <div id='id1'>
+                <h1>STUDENTS PER COURSE</h1>
+            </div>
+            <div id='id2'>
+                <p>Bootcamp Management System</p>
+            </div>
+        </header>
+
+
+
+        <form action="">
+            <fieldset class="newField">
+                <legend>New Entry</legend>
+                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
+                    <p>
+                        <label>1. Select Course: <br>
+                            <select name="" id="">
+                                <option value="cd10">CB 10</option>
+                                <option value="cd11">CB 11</option>
+                                <option value="devops">DevOps</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="">2. Select Student <br>
+                            <select name="" id="">
+                                <option value="snn">Nikos Nikolaidis</option>
+                                <option value="scc">Christos Christidis</option>
+                                <option value="sss">Sofia Sofiadi</option>
+                                <option value="smm">Maria Mariaki</option>
+                                <option value="smmi">Mitsos Mitsakos</option>
+                            </select>
+                        </label>
+                    </p>
+
+
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </form>
+            </fieldset>
+        </form>
+
+
+        <!-- Stored Students -->
+        <summary>
+            <form action="">
+                <fieldset class="savedField">
+                    <legend>Student Per Course List</legend>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>Course</th>
+                            <th>Student</th>
+                            <th>Actions</th>
+
+                        </tr>
+                        <tr>
+                            <td style="color:blue">1</td>
+                            <td>CD 10</td>
+                            <td>Nikos Nikolaidis</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CB 11</td>
+                            <td>Christos Christidis</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>CB 10</td>
+                            <td>Sofia Sofiadi</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>CB 10</td>
+                            <td>Maria Mariaki</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>DevOps</td>
+                            <td>Mitsos Mitsakos</td>
+                            <td>Edit / Delete</td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </form>
+        </summary>
+        <!-- Footer -->
+        <footer id="footer">
+            <p>Copyright &copy: 2021 Bootcamp</p>
+        </footer>
+    </main>
+    <script src="validations.js"></script>
+</body>
+
+</html>

@@ -42,30 +42,49 @@
 
 
         <!-- <form action="" name="studentForm"> -->
-            <fieldset class="newField">
-                <legend>New Entry</legend>
+        <fieldset class="newField">
+            <legend>New Entry</legend>
 
-                
 
-                <form action="" id="courseForm"  novalidate >
-                    <div class="error" id="printError"></div>
-                    <p><label>Course Name: <br> <input type="text" name="coursename" id="coursename" required placeholder="Enter Course Name"></label></p>
-                    <p><label>Stream: <br> <input type="text" required placeholder="Add Stream"></label></p>
-                    <p><label for="type">Type: <br>
-                            <select name="type" id="type">
-                                <option value="">Full Time</option>
-                                <option value="partTime">Part Time</option>
-                            </select>
-                        </label>
-                    </p>
-                    <p><label for="start">Start Date: <br><input type="date" name="start"></label></p>
-                    <p><label for="end">End Date: <br><input type="date" name="end"></label></p>
-                    <!-- <input type="submit" value="Add Course"> -->
-                    <!-- <input type="reset" value="Clear"> -->
-                    <button id="clear" type="reset">Clear</button>
-                    <button id="submit" type="submit" onclick="validateStudentForm()">Submit</button>
-                </form>
-            </fieldset>
+
+            <form action="" id="courseForm" onsubmit="validateCourseForm()" novalidate>
+                <div class="error" id="courseValidation"></div>
+                <p>
+                    <div class="errorOutput" id="courseNameValidation"></div>
+                    <label for="courseName">*Course Name: </label> <br>
+                    <input type="text" name="coursenamee" id="courseName" required placeholder="Enter Course Name">
+                </p>
+                <p>
+                    <div class="errorOutput" id="streamValidation"></div>
+                    <label for="stream">*Stream: <br> </label>
+                    <input type="text" name="streamm" id="stream" required placeholder="Add Stream">
+                </p>
+                <p>
+                    <div class="errorOutput" id="typeValidation"></div>
+                    <label for="type">*Type: </label><br>
+                    <select name="typee" id="type">
+                        <option value="">Full Time</option>
+                        <option value="partTime">Part Time</option>
+                    </select>
+                </p>
+                <p>
+                    <div class="errorOutput" id="startDateValidation"></div>
+                    <label for="startDate">*Start Date: </label> <br>
+                    <input type="date" name="start" id="startDate">
+                </p>
+                <p>
+                    <div class="errorOutput" id="endDateValidation"></div>
+                    <label for="endDate">*End Date: <br></label>
+                    <input type="date" name="end" id="endDate">
+                </p>
+                <!-- <input type="submit"  value="Add Course"> -->
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+
+                <!-- <button id="clear" type="reset">Clear</button> -->
+                <!-- <button id="submit" type="submit" >Submit</button> -->
+            </form>
+        </fieldset>
         <!-- </form> -->
 
 
@@ -132,9 +151,10 @@
                             <td>10/10/2021</td>
                             <td>09/06/2022</td>
                             <td style="color: firebrick
-                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                    </a></td>
+                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
                         </tr>
                         <tr>
                             <td style="color:blue">5</td>
@@ -144,7 +164,8 @@
                             <td>10/02/2022</td>
                             <td>10/05/2022</td>
                             <td style="color: firebrick
-                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
                                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </a></td>
                         </tr>
@@ -156,9 +177,10 @@
                             <td>01/01/2022</td>
                             <td>01/07/2022</td>
                             <td style="color: firebrick
-                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                    </a></td>
+                            ;"> <a class="btn btn-danger" aria-label="Delete"><i class="fa fa-pencil-square-o"
+                                        aria-hidden="true"></i>
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                </a></td>
                         </tr>
                     </table>
                 </fieldset>

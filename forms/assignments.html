@@ -40,24 +40,43 @@
 
         <!-- <button class="button button1">Green</button> -->
 
-        <form action="">
-            <fieldset class="newField">
-                <legend>New Entry</legend>
-                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
+        <fieldset class="newField">
+            <legend>New Entry</legend>
 
-                    <p><label>Title: <br> <input type="text" required placeholder="Enter Assignement Title"></label>
-                    </p>
-                    <p><label>Select Description: <br> <textarea name="Comments" id="" cols="30"
-                                rows="4"></textarea></label></p>
+            <div class="errorOutput" id="assignmentValidation"></div>
 
-                    <p><label>Select Deadline: <br><input type="date"></label></p>
-                    <p><label>Oral Mark: <br><input type="number"></label></p>
-                    <p><label>Total Mark: <br><input type="number"></label></p>
-                    <input type="submit" value="Add Assignment">
-                    <input type="reset" value="Clear">
-                </form>
-            </fieldset>
-        </form>
+            <form action="" id="assignmentForm" novalidate>
+                <p>
+                    <div class="errorOutput" id="titleValidation"></div>
+                    <label for="assignmentTitle">Title: </label> <br>
+                    <input type="text" id="title" required placeholder="Enter Assignement Title">
+                </p>
+                <p>
+                    <div class="errorOutput" id="textValidation"></div>
+                    <label for="textArea">Description: </label> <br>
+                    <textarea name="Comments" id="textArea" cols="30" rows="4"></textarea>
+                    <div id="charactersCounter"></div>
+                </p>
+
+                <p>
+                    <div class="errorOutput" id="deadlineValidation"></div>
+                    <label for="deadline">Deadline: </label><br>
+                    <input type="date" id="deadline">
+                </p>
+                <p>
+                    <div class="errorOutput" id="oralMarkValidation"></div>
+                    <label for="oralMark">Oral Mark: </label><br>
+                    <input type="number" id="oralMark">
+                </p>
+                <p>
+                    <div class="errorOutput" id="totalMarkValidation"></div>
+                    <label for="totalMark">Total Mark: </label><br>
+                    <input type="number" id="totalMark">
+                </p>
+                <input type="submit" value="Add Assignment">
+                <input type="reset" value="Clear">
+            </form>
+        </fieldset>
 
         <!-- Stored Students -->
         <summary>
@@ -174,7 +193,13 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
     </main>
-    <script src="validations.js"></script>
+    <script src="../validations.js"></script>
+    <script>
+        document.getElementById('textArea').onkeyup = function () {
+            document.getElementById('charactersCounter').innerHTML = "Characters left: " + (100 - this.value
+            .length);
+        };
+    </script>
 </body>
 
 </html>

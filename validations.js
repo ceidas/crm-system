@@ -49,7 +49,7 @@
 //             e.preventDefault();
 
 //         } else if ((end.getFullYear() < start.getFullYear()) || ((end.getFullYear() === start.getFullYear()) && end.getMonth() < start.getMonth())) {
-//             document.getElementById("startDateValidation").innerHTML = "Invalid date input";
+//             document.getElementById("endDateValidation").innerHTML = "Invalid date input";
 //             e.preventDefault();
 //         } else {
 //             document.getElementById("startDateValidation").innerHTML = "";
@@ -99,15 +99,152 @@
 // });
 
 // ************* ASSIGNMENTS/COURSE ************* //
+// document.getElementById("assignmentPerCourseForm").addEventListener("submit", function (event) {
+//     console.log("test");
+//     let selectCourse = document.getElementById("selectCourse"),
+//         selectAssignment = document.getElementById("selectAssignment");
+
+//     if (selectCourse.value === "") {
+//         document.getElementById("selectCourseValidation").innerHTML = "Select Option"
+//         event.preventDefault();
+//     }else{
+//         document.getElementById("selectCourseValidation").innerHTML = " "
+//     }
+
+//     if (selectAssignment.value === "") {
+//         document.getElementById("selectAssignmentValidation").innerHTML = "Select Option"
+//         event.preventDefault();
+//     }else{
+//         document.getElementById("selectAssignmentValidation").innerHTML = ""
+//     }
+// });
 
 
-// ************* TRAINERS ************* //
+// document.getElementById("assignmentPerCourseForm").addEventListener("submit", function(event) {
+//     console.log("test");
+//     let selectCourse = document.getElementById("selectCourse"),
+//         selectAssignment = document.getElementById("selectAssignment");
 
+//     if (selectCourse === "" || selectAssignment === "") {
+//         document.getElementById("assignmentPerCourseValidation").innerHTML = "Option Required"
+//         event.preventDefault();
+//     }
+// })
+
+// // ************* TRAINERS ************* //
+// document.getElementById("trainersForm").addEventListener("submit", trainersFormValidation);
+
+// function trainersFormValidation(event) {
+//     var pattern = /^[A-Za-z\s]+$/
+//     firstName = document.getElementById("trainersFirstName");
+//     lastName = document.getElementById("trainersLastName");
+//     subject = document.getElementById("trainersSubject")
+
+//     if (firstName.value === "" || lastName.value === "" || subject.value === "") {
+//         document.getElementById("trainersValidation").innerHTML = "Required Fields";
+//         event.preventDefault();
+
+//     } else {
+//         document.getElementById("trainersValidation").innerHTML = " ";
+
+//         if ((pattern.test(firstName.value) === true) && firstName.value.length < 10) {
+//             document.getElementById("trainersFirstNameValidation").innerHTML = ""
+//         } else {
+//             document.getElementById("trainersFirstNameValidation").innerHTML = "Only Characters Allowed. Max 10 Characters."
+//             event.preventDefault();
+//         }
+
+//         if (pattern.test(lastName.value) !== true) {
+//             document.getElementById("trainersLastNameValidation").innerHTML = "Only Characters Allowed"
+//             event.preventDefault();
+//         } else {
+//             document.getElementById("trainersLastNameValidation").innerHTML = ""
+//         }
+
+//     }
+// }
 
 // ************* TRAINERS/COURSE ************* //
 
+// document.getElementById("trainersPerCourseForm").addEventListener("submit", function (event) {
+//     let selectCourse = document.getElementById("selectCourse"),
+//         selectAssignment = document.getElementById("selectTrainer");
 
+//     if (selectCourse.value === "") {
+//         document.getElementById("selectCourseValidation").innerHTML = "Select Option"
+//         event.preventDefault();
+//     }else{
+//         document.getElementById("selectCourseValidation").innerHTML = " "
+//     }
+
+//     if (selectAssignment.value === "") {
+//         document.getElementById("selectTrainerValidation").innerHTML = "Select Option"
+//         event.preventDefault();
+//     }else{
+//         document.getElementById("selectTrainerValidation").innerHTML = ""
+//     }
+// });
 // ************* STUDENTS ************* //
+
+// document.getElementById("studentForm").addEventListener('submit', studentFormValidation)
+
+// function studentFormValidation(e) {
+
+//     var studentFirstName = document.getElementById("studentFirstName");
+//     var studentLastName = document.getElementById("studentLastName");
+//     var dob = document.getElementById("studentDoB");
+//     var tuitionFee = document.getElementById("tuitionFee");
+
+
+//     if (studentFirstName.value === "" || studentLastName.value === "" || dob.value === "" || tuitionFee.value === "" ) {
+//         document.getElementById("studentForm").style.color = "blue";
+//         document.getElementById("studentFormValidations").innerHTML = "Required Fields";
+//         document.getElementById("studentFirstNameValidation").innerHTML = "";
+//         document.getElementById("studentLastNameValidation").innerHTML = "";
+//         e.preventDefault();
+//     } else {
+
+//         document.getElementById("studentFormValidations").innerHTML = "";
+
+//         var patternName = /^[A-Za-z\s]+$/
+
+
+//         if (patternName.test(studentFirstName.value) !== true) {
+//             document.getElementById("studentFirstNameValidation").innerHTML = "Only Characters Allowed";
+//             e.preventDefault();
+//         } else {
+//             document.getElementById("studentFirstNameValidation").innerHTML = "";
+//         }
+//         if (patternName.test(studentLastName.value) !== true) {
+//             document.getElementById("studentLastNameValidation").innerHTML = "Only Characters Allowed";
+//             e.preventDefault();
+//         } else {
+//             document.getElementById("studentLastNameValidation").innerHTML = "";
+//         }
+//     }
+// }
+
 
 
 // ************* STUDENTS/COURSE ************* //
+
+document.getElementById("studentPerCourseForm").addEventListener("submit", function (event) {
+    let selectCourse = document.getElementById("selectCourse"),
+        selectStudent = document.getElementById("selectStudent");
+
+    if (selectCourse.value === "") {
+        document.getElementById("selectCourseValidation").innerHTML = "Select Option"
+        document.getElementById("studentPerCourseForm").style.color = "blue";
+        event.preventDefault();
+    } else {
+        document.getElementById("selectCourseValidation").innerHTML = " "
+    }
+
+    if (selectStudent.value === "") {
+        document.getElementById("selectStudentValidation").innerHTML = "Select Option"
+        document.getElementById("studentPerCourseForm").style.color = "blue";
+        event.preventDefault();
+    } else {
+        document.getElementById("selectStudentValidation").innerHTML = ""
+    }
+});

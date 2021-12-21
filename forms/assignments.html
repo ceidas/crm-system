@@ -47,31 +47,31 @@
 
             <form action="" id="assignmentForm" novalidate>
                 <p>
-                    <div class="errorOutput" id="titleValidation"></div>
-                    <label for="assignmentTitle">Title: </label> <br>
+                    <label for="assignmentTitle">*Title: </label> <br>
                     <input type="text" id="title" required placeholder="Enter Assignement Title">
+                    <div class="errorOutput" id="titleValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="textValidation"></div>
-                    <label for="textArea">Description: </label> <br>
+                    <label for="textArea">*Description: </label> <br>
                     <textarea name="Comments" id="textArea" cols="30" rows="4"></textarea>
                     <div id="charactersCounter"></div>
+                    <div class="errorOutput" id="textValidation"></div>
                 </p>
 
                 <p>
-                    <div class="errorOutput" id="deadlineValidation"></div>
-                    <label for="deadline">Deadline: </label><br>
+                    <label for="deadline">*Deadline: </label><br>
                     <input type="date" id="deadline">
+                    <div class="errorOutput" id="deadlineValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="oralMarkValidation"></div>
-                    <label for="oralMark">Oral Mark: </label><br>
+                    <label for="oralMark">*Oral Mark: </label><br>
                     <input type="number" id="oralMark">
+                    <div class="errorOutput" id="oralMarkValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="totalMarkValidation"></div>
-                    <label for="totalMark">Total Mark: </label><br>
+                    <label for="totalMark">*Total Mark: </label><br>
                     <input type="number" id="totalMark">
+                    <div class="errorOutput" id="totalMarkValidation"></div>
                 </p>
                 <input type="submit" value="Add Assignment">
                 <input type="reset" value="Clear">
@@ -193,7 +193,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
     </main>
-    <script src="../validations.js"></script>
+    <script src="../js/assignmentValidations.js"></script>
     <script>
         document.getElementById('textArea').onkeyup = function () {
             document.getElementById('charactersCounter').innerHTML = "Characters left: " + (100 - this.value

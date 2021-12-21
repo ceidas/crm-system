@@ -40,37 +40,40 @@
 
 
 
-        <form action="">
-            <fieldset class="newField">
-                <legend>New Entry</legend>
-                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
-                    <p>
-                        <label>1. Select Course: <br>
-                            <select name="" id="">
-                                <option value="cd10">CB 10</option>
-                                <option value="cd11">CB 11</option>
-                                <option value="devops">DevOps</option>
-                            </select>
-                        </label>
-                    </p>
-                    <p>
-                        <label for="">2. Select Trainer <br>
-                            <select name="" id="">
-                                <option value="tgg">George Georgiadis</option>
-                                <option value="tcc">Christos Christoforis</option>
-                                <option value="tmm">Melina Melahrinou</option>
-                                <option value="taa">Alexandra Alexandridi</option>
-                                <option value="tkk">Katerina Katerinopoulou</option>
-                            </select>
-                        </label>
-                    </p>
+        <fieldset class="newField">
+            <legend>New Entry</legend>
+            <div class="errorOutput" id="trainersPerCourseValidations"></div>
+            <form action="" id="trainersPerCourseForm">
+                <p>
+                    <label for="selectCourse">1. Select Course: <br>
+                        <select name="" id="selectCourse">
+                            <option value="">--Please choose an option--</option>
+                            <option value="cd10">CB 10</option>
+                            <option value="cd11">CB 11</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectCourseValidation"></div>
+                </p>
+                <p>
+                    <label for="selectTrainer">2. Select Trainer <br>
+                        <select name="" id="selectTrainer">
+                            <option value="">--Please choose an option--</option>
+                            <option value="tgg">George Georgiadis</option>
+                            <option value="tcc">Christos Christoforis</option>
+                            <option value="tmm">Melina Melahrinou</option>
+                            <option value="taa">Alexandra Alexandridi</option>
+                            <option value="tkk">Katerina Katerinopoulou</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectTrainerValidation"></div>
+                </p>
 
 
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Clear">
-                </form>
-            </fieldset>
-        </form>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+        </fieldset>
 
 
         <!-- Stored Students -->
@@ -126,7 +129,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
     </main>
-    <script src="validations.js"></script>
+    <script src="../js/trainerPerCourseValidation.js"></script>
 </body>
 
 </html>

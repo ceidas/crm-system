@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../fonts/">
+    <link href="../fonts/">
     <link rel="stylesheet" href="../css/style.css">
     <!-- <link rel="stylesheet" href="../css/student.css">
     <link rel="stylesheet" href="../css/calendar.css"> -->
@@ -24,7 +24,6 @@
         <a href="studentsPerCourse.html"><i class="fa fa-fw fa-user"></i> Stud/Course</a>
         <br>
         <a href="" target="demo"><i class="fa fa-fw fa-sign-out" aria-hidden="true"></i> Log Out</a>
-
     </div>
 
     <!-- Add-Form Section -->
@@ -40,41 +39,43 @@
 
 
 
-        <form action="">
-            <fieldset class="newField">
-                <legend>New Entry</legend>
-                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
-                    <p>
-                        <label>1. Select Course: <br>
-                            <select name="" id="">
-                                <option value="cd10">CB 10</option>
-                                <option value="cd11">CB 11</option>
-                                <option value="devops">DevOps</option>
-                            </select>
-                        </label>
-                    </p>
-                    <p>
-                        <label for="">2. Select Assignement <br>
-                            <select name="" id="">
-                                <option value="ajs1">Assignment 1</option>
-                                <option value="ajs2">Assignment 2</option>
-                                <option value="ajs3">Assignment 3</option>
-                                <option value="ajs4">Assignment 4</option>
-                                <option value="ajs5">Assignment 5</option>
-                                <option value="ajsi1">Individual 1</option>
-                                <option value="ajsi2">Individual 2</option>
-                                <option value="apy1">Assign CLD1</option>
-                                <option value="apy2">Assign CLD2</option>
-                            </select>
-                        </label>
-                    </p>
+        <fieldset class="newField">
+            <legend>New Entry</legend>
 
+            <form action="" id="assignmentPerCourseForm" novalidate>
+                <p>
+                    <label for="selectCourse">1. Select Course: <br>
+                        <select name="selectCourse" id="selectCourse">
+                            <option value="">--Please choose an option--</option>
+                            <option value="cd10">CB 10</option>
+                            <option value="cd11">CB 11</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectCourseValidation"></div>
+                </p>
+                <p>
+                    <label for="selectAssignment">2. Select Assignement <br>
+                        <select name="selectAssignment" id="selectAssignment">
+                            <option value="">--Please choose an option--</option>
+                            <option value="ajs1">Assignment 1</option>
+                            <option value="ajs2">Assignment 2</option>
+                            <option value="ajs3">Assignment 3</option>
+                            <option value="ajs4">Assignment 4</option>
+                            <option value="ajs5">Assignment 5</option>
+                            <option value="ajsi1">Individual 1</option>
+                            <option value="ajsi2">Individual 2</option>
+                            <option value="apy1">Assign CLD1</option>
+                            <option value="apy2">Assign CLD2</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectAssignmentValidation"></div>
+                </p>
 
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Clear">
-                </form>
-            </fieldset>
-        </form>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+        </fieldset>
 
 
         <!-- Stored Students -->
@@ -88,7 +89,6 @@
                             <th>Course</th>
                             <th>Assignment</th>
                             <th>Actions</th>
-
                         </tr>
                         <tr>
                             <td style="color:blue">1</td>
@@ -154,7 +154,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
 
-        <script src="validations.js"></script>
+        <script src="../js/assignmentPerCourseValidations.js"></script>
     </main>
 </body>
 

@@ -49,32 +49,33 @@
 
             <form action="" id="courseForm" novalidate>
                 <p>
-                    <div class="errorOutput" id="courseNameValidation"></div>
                     <label for="courseName">*Course Name: </label> <br>
                     <input type="text" name="coursenamee" id="courseName" required placeholder="Enter Course Name">
+                    <div class="errorOutput" id="courseNameValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="streamValidation"></div>
                     <label for="stream">*Stream: <br> </label>
                     <input type="text" name="streamm" id="stream" required placeholder="Add Stream">
+                    <div class="errorOutput" id="streamValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="typeValidation"></div>
                     <label for="type">*Type: </label><br>
                     <select name="typee" id="type">
-                        <option value="">Full Time</option>
+                        <option value="">--Please choose an option--</option>
+                        <option value="fullTime">Full Time</option>
                         <option value="partTime">Part Time</option>
                     </select>
+                    <div class="errorOutput" id="typeValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="startDateValidation"></div>
                     <label for="startDate">*Start Date: </label> <br>
                     <input type="date" name="start" id="startDate">
+                    <div class="errorOutput" id="startDateValidation"></div>
                 </p>
                 <p>
-                    <div class="errorOutput" id="endDateValidation"></div>
                     <label for="endDate">*End Date: <br></label>
                     <input type="date" name="end" id="endDate">
+                    <div class="errorOutput" id="endDateValidation"></div>
                 </p>
                 <!-- <input type="submit"  value="Add Course"> -->
                 <input type="submit" value="Submit">
@@ -190,7 +191,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
     </div>
-    <script src="../validations.js"></script>
+    <script src="../js/courseValidations.js"></script>
 </body>
 
 </html>

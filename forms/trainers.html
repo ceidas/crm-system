@@ -40,19 +40,32 @@
         </header>
 
 
+        <fieldset class="newField">
+            <legend>Add Trainer</legend>
+            <div class="errorOutput" id="trainersValidation"></div>
 
-        <form action="">
-            <fieldset class="newField">
-                <legend>Add Trainer</legend>
-                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
-                    <p><label>First Name: <br> <input type="text" required placeholder="Enter Your Name"></label></p>
-                    <p><label>Last Name: <br> <input type="text" required placeholder="Enter Your Surname"></label></p>
-                    <p><label>Subject: <br> <input type="text" required placeholder="Enter Subject(s)"></label></p>
-                    <input type="submit" value="Add Trainer">
-                    <input type="reset" value="Clear">
-                </form>
-            </fieldset>
-        </form>
+            <form action="" id="trainersForm" novalidate>
+                <p>
+                    <label for="trainersFirstName">*First Name:</label> <br>
+                    <input type="text" id="trainersFirstName" required placeholder="Enter Your Name">
+                    <div class="errorOutput" id="trainersFirstNameValidation"></div>
+                </p>
+                <p>
+                    <label for="trainersLastName">*Last Name: </label> <br>
+                    <input type="text" id="trainersLastName" required placeholder="Enter Your Surname">
+                    <div class="errorOutput" id="trainersLastNameValidation"></div>
+
+                </p>
+                <p>
+                    <label for="trainersSubject">*Subject:</label> <br>
+                    <input type="text" id="trainersSubject" required placeholder="Enter Subject(s)">
+                    <div class="errorOutput" id="trainersSubjectValidation"></div>
+
+                </p>
+                <input type="submit" value="Add Trainer">
+                <input type="reset" value="Clear">
+            </form>
+        </fieldset>
 
 
         <!-- Stored Students -->
@@ -112,7 +125,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
 
-        <script src="validations.js"></script>
+        <script src="../js/trainerValidations.js"></script>
     </main>
 </body>
 

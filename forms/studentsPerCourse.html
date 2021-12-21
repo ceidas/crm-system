@@ -40,37 +40,40 @@
 
 
 
-        <form action="">
-            <fieldset class="newField">
-                <legend>New Entry</legend>
-                <form action="" id="myForm" onsubmit="return validateForm()" method="post">
-                    <p>
-                        <label>1. Select Course: <br>
-                            <select name="" id="">
-                                <option value="cd10">CB 10</option>
-                                <option value="cd11">CB 11</option>
-                                <option value="devops">DevOps</option>
-                            </select>
-                        </label>
-                    </p>
-                    <p>
-                        <label for="">2. Select Student <br>
-                            <select name="" id="">
-                                <option value="snn">Nikos Nikolaidis</option>
-                                <option value="scc">Christos Christidis</option>
-                                <option value="sss">Sofia Sofiadi</option>
-                                <option value="smm">Maria Mariaki</option>
-                                <option value="smmi">Mitsos Mitsakos</option>
-                            </select>
-                        </label>
-                    </p>
+        <fieldset class="newField">
+            <legend>New Entry</legend>
+            <div class="errorOutput" id="studentPerCourseFormValidations"></div>
+            <form action="" id="studentPerCourseForm" >
+                <p>
+                    <label for="selectCourse">1. Select Course: <br>
+                        <select name="" id="selectCourse">
+                            <option value="">--Please choose an option--</option>
+                            <option value="cd10">CB 10</option>
+                            <option value="cd11">CB 11</option>
+                            <option value="devops">DevOps</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectCourseValidation"></div>
+                </p>
+                <p>
+                    <label for="selectStudent">2. Select Student <br>
+                        <select name="" id="selectStudent">
+                            <option value="">--Please choose an option--</option>
+                            <option value="snn">Nikos Nikolaidis</option>
+                            <option value="scc">Christos Christidis</option>
+                            <option value="sss">Sofia Sofiadi</option>
+                            <option value="smm">Maria Mariaki</option>
+                            <option value="smmi">Mitsos Mitsakos</option>
+                        </select>
+                    </label>
+                    <div class="errorOutput" id="selectStudentValidation"></div>
+                </p>
 
 
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Clear">
-                </form>
-            </fieldset>
-        </form>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Clear">
+            </form>
+        </fieldset>
 
 
         <!-- Stored Students -->
@@ -126,7 +129,7 @@
             <p>Copyright &copy: 2021 Bootcamp</p>
         </footer>
     </main>
-    <script src="validations.js"></script>
+    <script src="../js/studentPerCourseValidations.js"></script>
 </body>
 
 </html>
